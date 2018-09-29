@@ -19,7 +19,7 @@ $(".mknew").on("click",function(){
   $(".buttons").append(button)
 })
 $(document).on('click','.gifbtn',function(){
-
+  $("pictures").empty()
   var emotion = $(this).attr("searchterm").trim()
   apikey = "M9iZOfoKJVRIUjlHZSeifrswb8vjiDVb"
   $.ajax({
