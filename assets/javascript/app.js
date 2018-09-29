@@ -38,17 +38,19 @@ $(document).on('click','.gifbtn',function(){
       newDiv.append("<p class = 'bg-light'>Rating: "+response.data[i].rating+"</p>")
       $(".pictures").append(newDiv)
     }
-    $(".changeState").on("click",function(){
+    })
+$(document).on('click','.changeState',function(){
+      var state = $(this).attr("data-state")
       var animate = $(this).attr("data-animate")
       var still = $(this).attr("data-still")
-      if ($(this).attr("data-state")=="still") {
-        $(this).attr("src",animate)
-        $(this).attr("data-state","animate")
+      if (state == "still") {
+      $(this).attr("src",animate)
+      $(this).attr("data-state","animate")
       }
-      else if($(this).attr("data-state")== "animate")
+      else{
       $(this).attr("src",still)
       $(this).attr("data-state","still")
-    })
+    }
     })
 
 })
