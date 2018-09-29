@@ -39,19 +39,19 @@ $(document).on('click','.gifbtn',function(){
       $(".pictures").append(newDiv)
     }
     })
-$(document).on('click','.changeState',function(){
-      var state = $(this).attr("data-state")
-      var animate = $(this).attr("data-animate")
-      var still = $(this).attr("data-still")
-      if (state == "still") {
-      $(this).attr("src",animate)
-      $(this).attr("data-state","animate")
-      }
-      else{
-      $(this).attr("src",still)
-      $(this).attr("data-state","still")
-    }
-    })
+    $(".pictures").on('click','.changeState',function(){
+          var state = $(this).attr("data-state")
+          var animate = $(this).attr("data-animate")
+          var still = $(this).attr("data-still")
+          if (state == "still") {
+          $(this).attr("src",animate)
+          $(this).attr("data-state","animate")
+          }
+          else{
+          $(this).attr("src",still)
+          $(this).attr("data-state","still")
+        }
+        })
 
 })
 
